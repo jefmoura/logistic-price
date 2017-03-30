@@ -84,7 +84,7 @@ public class Graph {
 				neighbor = edge.getTarget();
 
 				if (!neighbor.wasVisited()) {
-					int currentNodeDistance = currentNode.getDistance() + edge.getHard();
+					int currentNodeDistance = currentNode.getDistance() + edge.getWeight();
 					if (neighbor.getDistance() > currentNodeDistance) {
 						neighbor.setDistance(currentNodeDistance);
 						neighbor.setPrevious(currentNode);
