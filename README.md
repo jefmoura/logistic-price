@@ -12,7 +12,7 @@ A normalized package weight is the greater value of an actual weight or a volume
 Width x Length x Height (cm) / 5000 = Volumetric Weight (kg)
 `
 
-### Compile
+## Compile
 
 As it's a Java program we can compile it using your favorite IDE or a command line. This is a simple and easy way to compile the program:
 
@@ -22,7 +22,7 @@ $machine: javac logistic-price/*.java
 
 Afterwards, we'll have the program ready to be used.
 
-### Execute
+## Execute
 
 To execute the program we have to follow some steps. First, you have to have a file with a network representation and it has to follow this structure:
 
