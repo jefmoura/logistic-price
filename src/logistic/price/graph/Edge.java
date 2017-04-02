@@ -2,20 +2,20 @@ package logistic.price.graph;
 
 public class Edge {
 
-	private int hard;
+	private int weight;
 	private Node origin;
 	private Node target;
 
-	public Edge(Node origin, Node target, int hard) {
+	public Edge(Node origin, Node target, int weight) {
 
-		this.hard = hard;
+		this.weight = weight;
 		this.origin = origin;
 		this.target = target;
 	}
 
-	public int getHard() {
+	public int getWeight() {
 
-		return hard;
+		return weight;
 	}
 
 	public Node getTarget() {

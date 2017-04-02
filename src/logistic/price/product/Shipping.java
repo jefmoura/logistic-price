@@ -47,7 +47,7 @@ public class Shipping {
 	public double calculateCost(Graph graph) {
 
 		double cost;
-		int hard;
+		int weight;
 		Node origin = new Node();
 		Node target = new Node();
 		List<Node> shortPath = new ArrayList<Node>();
@@ -64,8 +64,8 @@ public class Shipping {
 			return -1;
 		}
 		else {
-			hard = shortPath.get(0).getDistance();
-			cost = Math.sqrt(hard) * pack.getNormalizedWeight();
+			weight = shortPath.get(0).getDistance();
+			cost = Math.sqrt(weight) * pack.getNormalizedWeight();
 			return cost;
 		}
 	}

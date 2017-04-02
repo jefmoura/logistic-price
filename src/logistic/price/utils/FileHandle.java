@@ -21,19 +21,14 @@ public class FileHandle {
 		Node neighbor = new Node();
 		Edge edge;
 		String line;
-		String hard;
+		String weight;
 		ArrayList<String[]> nodeInfo = new ArrayList<String[]>();
 		Map<String, Node> nodeMap = new HashMap<String, Node>();
 
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			while ((line = reader.readLine()) != null) {
-				reader.mark(0);
 				for (String info : line.split(",")) {
-					if (info.contains("@")) {
-						reader.reset();
-						return graph;
-					}
 					nodeInfo.add(info.split(":"));
 					if (nodeInfo.get(0).length == 1) {
 						nodeSource = nodeMap.get(nodeInfo.get(0)[0]);
@@ -49,8 +44,8 @@ public class FileHandle {
 							graph.addNode(neighbor);
 							nodeMap.put(neighbor.getName(), neighbor);
 						}
-						hard = nodeInfo.get(0)[1];
-						edge = new Edge(nodeSource, neighbor, Integer.parseInt(hard));
+						weight = nodeInfo.get(0)[1];
+						edge = new Edge(nodeSource, neighbor, Integer.parseInt(weight));
 						graph.addEdge(edge);
 					}
 					nodeInfo.clear();
