@@ -1,6 +1,6 @@
 # Logistic Price
 
-When we have a network of nodes and want to ship a package from a node to any other one at the optimal (lowest) cost, we need to find out the shortest path between them. Therefore, to solve this problem we need to consider, for example, the difficulty of shipping a package between the nodes. Considering that exists only positive weight between nodes, to solve this problem, we use the Dijkstra's Algorithm. To calc the shipment of a package with a certain weight and dimensions at a fixed cost, we use the following formula:
+When we have a network of nodes and want to ship a package from a node to any other one at the optimal (lowest) cost, we need to find out the shortest path between them. Therefore, considering the difficulty of shipping a package between the nodes and that exists only positive weight between nodes, we use the Dijkstra's Algorithm to solve this problem. To calc the shipment of a package with a certain weight and dimensions at a fixed cost, we use the following formula:
 
 `
 shipping cost (EUR) = sqrt(sum(HARD)) * normalized weight (kg)
